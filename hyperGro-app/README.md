@@ -1,4 +1,4 @@
-live Project demo https://hyper-gro-new-repo.vercel.app/
+live Project demo https://vercle-hypergro.vercel.app/
 
 Created this project using typeScript
 
