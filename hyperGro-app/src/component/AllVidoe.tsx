@@ -166,7 +166,7 @@ const AllVideo: React.FC = () => {
               </div>
   
               <div style={{ display: "flex" }}>
-                <h3>{short.creator?.handle}</h3>
+                <h3 style={{color: "red", fontWeight: "800" , fontSize: "15px"}}>{short.creator?.handle}</h3>
                 <div
                   style={{
                     display: "flex",
@@ -175,37 +175,37 @@ const AllVideo: React.FC = () => {
                     justifyContent: "space-evenly",
                   }}
                 >
-                  <button style={{ fontSize: "20px" }}>
+                  <button style={{ fontSize: "20px", color: "blue" }}>
                     <AiOutlineLike />
                   </button>
                   <button style={{ fontSize: "20px" }}>
                     <AiTwotoneDislike />
                   </button>
-                  <button>
+                  <button >
                     <FaRegCommentAlt />
                   </button>
-                  <button>
+                  <button style={{ color: "blue" }}>
                     <FaEllipsisVertical />
                   </button>
                 </div>
               </div>
             </div>
             {/* Description and Views */}
-            <p style={{ marginLeft: "60px", overflow: "hidden", whiteSpace: "nowrap", textOverflow: "ellipsis" }}>
+            <p style={{ marginLeft: "60px", overflow: "hidden", whiteSpace: "nowrap", textOverflow: "ellipsis", color: "#9E9E9E", fontWeight: 700}}>
               {short.submission.title}
             </p>
-            <p style={{ marginLeft: "60px", overflow: "hidden", whiteSpace: "nowrap", textOverflow: "ellipsis" }}>
+            <p style={{ marginLeft: "60px", overflow: "hidden", whiteSpace: "nowrap", textOverflow: "ellipsis", color: "#757575", }}>
               507K views 1 month ago
             </p>
   
             <div style={{ marginLeft: "60px" }}>
               {showFullDescription
                 ? short.submission.description.split(" ").slice(0, 20).join(" ")
-                : short.submission.description.slice(0, 20) + "..."}
+                : short.submission.description.slice(0, 20) + "..."} 
               {!showFullDescription ? (
-                <button onClick={toggleDescription}>Read more</button>
+                <button onClick={toggleDescription} style={{color: "red"}}>Read more</button>
               ) : (
-                <button onClick={toggleDescription}>...Read less</button>
+                <button onClick={toggleDescription} style={{color: "yellow"}}>...Read less</button>
               )}
             </div>
           </div>
