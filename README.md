@@ -1,7 +1,7 @@
 # React + TypeScript + Vite
 
 live Project demo
-https://hyper-gro-new-repo.vercel.app/
+https://vercle-hypergro.vercel.app/
 
 Created this project using typeScript
 
