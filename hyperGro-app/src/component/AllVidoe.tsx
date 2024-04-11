@@ -30,6 +30,8 @@ const AllVideo: React.FC = () => {
   const [currentPage, setCurrentPage] = useState<number>(1);
   const [totalPages, setTotalPages] = useState<number>(10);
   const [playingVideoUrl, setPlayingVideoUrl] = useState<string>("");
+  const[inc, setInc] = useState(500)
+  const[dec, setDec] = useState(20)
   const [showFullDescription, setShowFullDescription] =
     useState<boolean>(false);
   const videoRef = useRef<HTMLVideoElement>(null);
@@ -70,6 +72,16 @@ const AllVideo: React.FC = () => {
   const toggleDescription = () => {
     setShowFullDescription(!showFullDescription);
   };
+
+
+
+  const handleInc = ()=>{
+    setInc(inc+1)
+  }
+
+  const handleDec = ()=>{
+    setDec(dec-1)
+  }
 
   return (
     <div>
@@ -175,11 +187,11 @@ const AllVideo: React.FC = () => {
                     justifyContent: "space-evenly",
                   }}
                 >
-                  <button style={{ fontSize: "20px", color: "blue" }}>
-                    <AiOutlineLike />
+                  <button style={{ fontSize: "20px", color: "blue", display: "flex" }}>
+                    <AiOutlineLike onClick={handleInc}/><span style={{fontSize: "10px"}}>{inc}:k</span>
                   </button>
-                  <button style={{ fontSize: "20px" }}>
-                    <AiTwotoneDislike />
+                  <button style={{ fontSize: "20px", display: "flex" }}>
+                    <AiTwotoneDislike onClick={handleDec}/><span style={{fontSize: "10px"}}>{dec}:k</span>
                   </button>
                   <button >
                     <FaRegCommentAlt />
